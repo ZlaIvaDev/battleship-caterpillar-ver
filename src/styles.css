@@ -1,5 +1,73 @@
 /* styules.css*/
 
+*,
+::before,
+::after {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: armenian;
+    line-height: 1.5;
+    line-break: normal;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #f406f4;
+    background-color: #4bd480;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1pc solid black;
+}
+
+.overlay {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    height: 600px;
+    width: 500px;
+    border: 1px solid #2b7547;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background-color: #4bd480;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 2px 4px 5px 0px #2b7547;
+}
+h1 {
+    background-color: #2b7547;
+    width: 100%;
+    padding: 1rem;
+}
+button.modal-btn {
+    margin-bottom: 1rem;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2b7547;
+    color: whitesmoke;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.hide-welcome-modal {
+    opacity: 0;
+    pointer-events: none;
 }
