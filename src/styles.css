@@ -119,3 +119,23 @@ button.modal-btn {
     width: auto;
     flex-grow: 0;
 }
+/* shapes */
+.fiver,.fourer, .threer,.twoer,.oner {
+    background-color: #eb7f5e;
+    border: none;
+}
+.fiver {
+    width: 200px;
+}
+.fourer {
+    width: 160px;
+}
+.threer {
+    width: 120px;
+}
+.twoer {
+    width: 80px;
+}
+.oner {
+    width: 40px;
+}

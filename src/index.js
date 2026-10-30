@@ -33,6 +33,8 @@ ptwoLockin.addEventListener('click',() => {
 const poneboard = document.querySelector('.board-one');
 const ptwoboard = document.querySelector('.board-two');
 
+const ctplrs = document.querySelectorAll('.ctplr');
+
 function createBoard() {
     
     for (let i = 0; i<100; i++) {
@@ -51,3 +53,28 @@ function createBoard() {
 }
 createBoard()
 
+let holderItem;
+
+function dragStart() {
+    holderItem = event.target;
+}
+function dragIt() {
+    event.preventDefault();
+    console.log(holderItem)
+}
+function dropIt() {
+    event.preventDefault();
+    if (event.target.classList == "cell") {
+        event.target.appendChild(holderItem)
+    }
+}
+
+ctplrs.forEach(ctp => {
+    ctp.addEventListener('dragstart', dragStart)
+})
+
+poneboard.addEventListener('dragover', dragIt);
+poneboard.addEventListener('drop', dropIt);
+
+ptwoboard.addEventListener('dragover', dragIt);
+ptwoboard.addEventListener('drop', dropIt);
